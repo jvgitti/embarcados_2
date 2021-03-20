@@ -1,0 +1,163 @@
+\hypertarget{group___pwm_ldd1__module}{
+\section{\-Pwm\-Ldd1 module documentation}
+\label{group___pwm_ldd1__module}\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_pwm_ldd1___t_device_data}{\-Pwm\-Ldd1\-\_\-\-T\-Device\-Data}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___pwm_ldd1__module_gace6a11e892466500d47d1f45f042bc53}{
+\#define {\bfseries \-C\-H\-A\-N\-N\-E\-L}~0x00\-U}
+\label{group___pwm_ldd1__module_gace6a11e892466500d47d1f45f042bc53}
+
+\item 
+\hypertarget{group___pwm_ldd1__module_ga84cbb2ece08b2bbcf18cd8d11cd04be6}{
+\#define {\bfseries \-Pwm\-Ldd1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-V\-A\-L\-U\-E}~0x\-C\-C\-C\-D\-U\-L}
+\label{group___pwm_ldd1__module_ga84cbb2ece08b2bbcf18cd8d11cd04be6}
+
+\item 
+\hypertarget{group___pwm_ldd1__module_gacdcbd23818cd671814d7de57743ed9dc}{
+\#define {\bfseries \-Pwm\-Ldd1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-V\-A\-L\-U\-E\-\_\-0}~0x\-C\-C\-C\-D\-U\-L}
+\label{group___pwm_ldd1__module_gacdcbd23818cd671814d7de57743ed9dc}
+
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_gaa604ec73f2dc5e1e562b5db4340b6812}{\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x40039000\-U
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_ga1b3859d3bd55122c9154a66be455b8d9}{\-Pwm\-Ldd1\-\_\-\-Device\-Data}~((\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$)\-P\-E\-\_\-\-L\-D\-D\-\_\-\-Get\-Device\-Structure(\-P\-E\-\_\-\-L\-D\-D\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-Pwm\-Ldd1\-\_\-\-I\-D))
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_gaa38fc755e64052f475cb0e4d21450e14}{\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_gafcbaff4220af3843645ee8afd0dc33af}{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_ga3c40592e036370a925ce77985b442fab}{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___pwm_ldd1__module_ga922754aa19568d373c9532a388447748}{
+typedef \hyperlink{struct_pwm_ldd1___t_device_data}{\-Pwm\-Ldd1\-\_\-\-T\-Device\-Data} $\ast$ {\bfseries \-Pwm\-Ldd1\-\_\-\-T\-Device\-Data\-Ptr}}
+\label{group___pwm_ldd1__module_ga922754aa19568d373c9532a388447748}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___pwm_ldd1__module_ga275bfbba3cebf17ba3f7ca816cb83da4}{\-Pwm\-Ldd1\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___pwm_ldd1__module_gaed049cbc4193f6508bf3445c18b21707}{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint16\-\_\-t \-Ratio)
+\begin{DoxyCompactList}\small\item\em \-This method sets a new duty-\/cycle ratio. \-Ratio is expressed as a 16-\/bit unsigned integer number. 0 -\/ \-F\-F\-F\-F value is proportional to ratio 0 -\/ 100\%. \-The method is available only if it is not selected list of predefined values in \mbox{[}\-Starting pulse width\mbox{]} property. \-Note\-: \-Calculated duty depends on the timer possibilities and on the selected period. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___pwm_ldd1__module_ga294fccb3c55cae73731b301e253218d1}{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint16\-\_\-t \-Time)
+\begin{DoxyCompactList}\small\item\em \-This method sets the new duty value of the output signal. \-The duty is expressed in microseconds as a 16-\/bit unsigned integer number. \-The method is available only if it is not selected list of predefined values in \mbox{[}\-Starting pulse width\mbox{]} property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{group___pwm_ldd1__module_ga1b3859d3bd55122c9154a66be455b8d9}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Device\-Data@{\-Pwm\-Ldd1\-\_\-\-Device\-Data}}
+\index{\-Pwm\-Ldd1\-\_\-\-Device\-Data@{\-Pwm\-Ldd1\-\_\-\-Device\-Data}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Device\-Data}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Pwm\-Ldd1\-\_\-\-Device\-Data~(({\bf \-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$)\-P\-E\-\_\-\-L\-D\-D\-\_\-\-Get\-Device\-Structure(\-P\-E\-\_\-\-L\-D\-D\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-Pwm\-Ldd1\-\_\-\-I\-D))}}
+\label{group___pwm_ldd1__module_ga1b3859d3bd55122c9154a66be455b8d9}
+\-Device data structure pointer used when auto initialization property is enabled. \-This constant can be passed as a first parameter to all component's methods. \hypertarget{group___pwm_ldd1__module_gaa38fc755e64052f475cb0e4d21450e14}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\label{group___pwm_ldd1__module_gaa38fc755e64052f475cb0e4d21450e14}
+\-Init method of the component \-Pwm\-Ldd1 is enabled (generated) \hypertarget{group___pwm_ldd1__module_gaa604ec73f2dc5e1e562b5db4340b6812}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S@{\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S@{\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S~0x40039000\-U}}
+\label{group___pwm_ldd1__module_gaa604ec73f2dc5e1e562b5db4340b6812}
+\-Peripheral base address of a device allocated by the component. \-This constant can be used directly in \-P\-D\-D macros. \hypertarget{group___pwm_ldd1__module_ga3c40592e036370a925ce77985b442fab}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\label{group___pwm_ldd1__module_ga3c40592e036370a925ce77985b442fab}
+\-Set\-Duty\-U\-S method of the component \-Pwm\-Ldd1 is enabled (generated) \hypertarget{group___pwm_ldd1__module_gafcbaff4220af3843645ee8afd0dc33af}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\label{group___pwm_ldd1__module_gafcbaff4220af3843645ee8afd0dc33af}
+\-Set\-Ratio16 method of the component \-Pwm\-Ldd1 is enabled (generated) 
+
+\subsection{\-Function \-Documentation}
+\hypertarget{group___pwm_ldd1__module_ga275bfbba3cebf17ba3f7ca816cb83da4}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Init@{\-Pwm\-Ldd1\-\_\-\-Init}}
+\index{\-Pwm\-Ldd1\-\_\-\-Init@{\-Pwm\-Ldd1\-\_\-\-Init}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \-Pwm\-Ldd1\-\_\-\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$}]{\-User\-Data\-Ptr}
+\end{DoxyParamCaption}
+)}}
+\label{group___pwm_ldd1__module_ga275bfbba3cebf17ba3f7ca816cb83da4}
+
+
+\-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-User\-Data\-Ptr} & -\/ \-Pointer to the user or \-R\-T\-O\-S specific data. \-This pointer will be passed as an event or callback parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item \-Pointer to the dynamically allocated private structure or \-N\-U\-L\-L if there was an error. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group___pwm_ldd1__module_ga294fccb3c55cae73731b301e253218d1}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S@{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S}}
+\index{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S@{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-D\-D\-\_\-\-T\-Error} \-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$}]{\-Device\-Data\-Ptr, }
+\item[{uint16\-\_\-t}]{\-Time}
+\end{DoxyParamCaption}
+)}}
+\label{group___pwm_ldd1__module_ga294fccb3c55cae73731b301e253218d1}
+
+
+\-This method sets the new duty value of the output signal. \-The duty is expressed in microseconds as a 16-\/bit unsigned integer number. \-The method is available only if it is not selected list of predefined values in \mbox{[}\-Starting pulse width\mbox{]} property. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Data\-Ptr} & -\/ \-Device data structure pointer returned by \mbox{[}\-Init\mbox{]} method. \\
+\hline
+{\em \-Time} & -\/ \-Duty to set \mbox{[}in microseconds\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item \-Error code, possible codes\-: \-E\-R\-R\-\_\-\-O\-K -\/ \-O\-K \-E\-R\-R\-\_\-\-S\-P\-E\-E\-D -\/ \-The component does not work in the active clock configuration \-E\-R\-R\-\_\-\-M\-A\-T\-H -\/ \-Overflow during evaluation \-E\-R\-R\-\_\-\-P\-A\-R\-A\-M\-\_\-\-R\-A\-N\-G\-E -\/ \-Parameter out of range 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{group___pwm_ldd1__module_gaed049cbc4193f6508bf3445c18b21707}{
+\index{\-Pwm\-Ldd1 module documentation@{\-Pwm\-Ldd1 module documentation}!\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16@{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16}}
+\index{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16@{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16}!PwmLdd1 module documentation@{\-Pwm\-Ldd1 module documentation}}
+\subsubsection[{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-D\-D\-\_\-\-T\-Error} \-Pwm\-Ldd1\-\_\-\-Set\-Ratio16 (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$}]{\-Device\-Data\-Ptr, }
+\item[{uint16\-\_\-t}]{\-Ratio}
+\end{DoxyParamCaption}
+)}}
+\label{group___pwm_ldd1__module_gaed049cbc4193f6508bf3445c18b21707}
+
+
+\-This method sets a new duty-\/cycle ratio. \-Ratio is expressed as a 16-\/bit unsigned integer number. 0 -\/ \-F\-F\-F\-F value is proportional to ratio 0 -\/ 100\%. \-The method is available only if it is not selected list of predefined values in \mbox{[}\-Starting pulse width\mbox{]} property. \-Note\-: \-Calculated duty depends on the timer possibilities and on the selected period. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Data\-Ptr} & -\/ \-Device data structure pointer returned by \mbox{[}\-Init\mbox{]} method. \\
+\hline
+{\em \-Ratio} & -\/ \-Ratio to set. 0 -\/ 65535 value is proportional to ratio 0 -\/ 100\% \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item \-Error code, possible codes\-: \-E\-R\-R\-\_\-\-O\-K -\/ \-O\-K \-E\-R\-R\-\_\-\-S\-P\-E\-E\-D -\/ \-The component does not work in the active clock configuration 
+\end{DoxyItemize}
+\end{DoxyReturn}

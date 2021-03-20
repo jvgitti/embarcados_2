@@ -1,0 +1,180 @@
+\hypertarget{main_8c}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/sources/main.c \-File \-Reference}
+\label{main_8c}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/sources/main.\-c@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/sources/main.\-c}}
+}
+
+
+\-Main do \-Projeto.  
+
+
+{\ttfamily \#include \char`\"{}\-Cpu.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Events.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Temp.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Adc\-Ldd1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-E\-S\-P.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-A\-Serial\-Ldd1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-C.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-A\-Serial\-Ldd2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-A1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Bit\-Io\-Ldd1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-A2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Bit\-Io\-Ldd2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Power.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Pwm\-Ldd1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-U1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-I1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Timer\-Int\-Ldd1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-U2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-U\-T\-I\-L1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-M\-C\-U\-C1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Types.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Error.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Const.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-I\-O\-\_\-\-Map.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__main__module_gab45c036afe4d6087324e2b3ef9c44013}{
+void \hyperlink{group__main__module_gab45c036afe4d6087324e2b3ef9c44013}{\-Send\-Cmd} (uint8\-\_\-t $\ast$s)}
+\label{group__main__module_gab45c036afe4d6087324e2b3ef9c44013}
+
+\begin{DoxyCompactList}\small\item\em \-Enviar comando para o \-E\-S\-P e recebe o caracter da string como argumento. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga53b9b40a2ee5feb9f1cbb6f8cf78efd1}{
+void \hyperlink{group__main__module_ga53b9b40a2ee5feb9f1cbb6f8cf78efd1}{\-Send\-P\-C} (uint8\-\_\-t $\ast$s)}
+\label{group__main__module_ga53b9b40a2ee5feb9f1cbb6f8cf78efd1}
+
+\begin{DoxyCompactList}\small\item\em \-Enviar string para o \-P\-C e recebe o caracter da string como argumento -\/ \-Mesma ideia da funcao \-Send\-Cmd. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga840291bc02cba5474a4cb46a9b9566fe}{
+int \hyperlink{group__main__module_ga840291bc02cba5474a4cb46a9b9566fe}{main} (void)}
+\label{group__main__module_ga840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCompactList}\small\item\em \-Faz a conexao ao \-Wifi e \-M\-Q\-T\-T; \-Faz a medicao de temperatura e sua publicacao; \-Trata os comandos para o motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__main__module_gaa9c4b03d1d417f452fdba8cc55f43251}{
+volatile char \hyperlink{group__main__module_gaa9c4b03d1d417f452fdba8cc55f43251}{flag\-\_\-temp\-\_\-update} = 0}
+\label{group__main__module_gaa9c4b03d1d417f452fdba8cc55f43251}
+
+\begin{DoxyCompactList}\small\item\em \-Flag para sinalizar que se deve fazer uma nova amostragem da temperatura. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga7a936bd06dddfff3ee575a2fec89a3f4}{
+volatile uint8\-\_\-t \hyperlink{group__main__module_ga7a936bd06dddfff3ee575a2fec89a3f4}{rcv} \mbox{[}100\mbox{]} = \{0\}}
+\label{group__main__module_ga7a936bd06dddfff3ee575a2fec89a3f4}
+
+\begin{DoxyCompactList}\small\item\em buffer da mensagem recebida \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gacf6481fda84b66f0f48b99c40933cd3f}{
+volatile uint8\-\_\-t \hyperlink{group__main__module_gacf6481fda84b66f0f48b99c40933cd3f}{posit} = 0}
+\label{group__main__module_gacf6481fda84b66f0f48b99c40933cd3f}
+
+\begin{DoxyCompactList}\small\item\em posicao no buffer rcv \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga2bc0bfc207698aaa7bef9f239361c082}{
+volatile char \hyperlink{group__main__module_ga2bc0bfc207698aaa7bef9f239361c082}{message} = 0}
+\label{group__main__module_ga2bc0bfc207698aaa7bef9f239361c082}
+
+\begin{DoxyCompactList}\small\item\em flag para sinalizar que a mensagem foi recebida \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga7a2992c0d8dff8b209b07fefab4de78c}{
+uint8\-\_\-t \hyperlink{group__main__module_ga7a2992c0d8dff8b209b07fefab4de78c}{cmd} \mbox{[}100\mbox{]} = \{0\}}
+\label{group__main__module_ga7a2992c0d8dff8b209b07fefab4de78c}
+
+\begin{DoxyCompactList}\small\item\em buffer de comando a ser escrito \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gaacd6d05062e9706d6d043a402e87dbaa}{
+uint8\-\_\-t \hyperlink{group__main__module_gaacd6d05062e9706d6d043a402e87dbaa}{top} \mbox{[}50\mbox{]} = \{0\}}
+\label{group__main__module_gaacd6d05062e9706d6d043a402e87dbaa}
+
+\begin{DoxyCompactList}\small\item\em string do topico \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gaf8ed8616e4f4b0eb16b3c180c9f0240c}{
+uint8\-\_\-t \hyperlink{group__main__module_gaf8ed8616e4f4b0eb16b3c180c9f0240c}{par} \mbox{[}10\mbox{]} = \{0\}}
+\label{group__main__module_gaf8ed8616e4f4b0eb16b3c180c9f0240c}
+
+\begin{DoxyCompactList}\small\item\em string do parametro do topico \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga8b48b2f491b838fb124da7f6f709aefb}{
+uint8\-\_\-t \hyperlink{group__main__module_ga8b48b2f491b838fb124da7f6f709aefb}{scan} = 0}
+\label{group__main__module_ga8b48b2f491b838fb124da7f6f709aefb}
+
+\begin{DoxyCompactList}\small\item\em scanner 1 de string \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga24f30879ceb631e80e0083f800a961e6}{
+uint8\-\_\-t \hyperlink{group__main__module_ga24f30879ceb631e80e0083f800a961e6}{scan\-\_\-2} = 0}
+\label{group__main__module_ga24f30879ceb631e80e0083f800a961e6}
+
+\begin{DoxyCompactList}\small\item\em scanner 2 de string \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga757344f09097232d715d55cbf9d61a43}{
+uint16\-\_\-t \hyperlink{group__main__module_ga757344f09097232d715d55cbf9d61a43}{val}}
+\label{group__main__module_ga757344f09097232d715d55cbf9d61a43}
+
+\begin{DoxyCompactList}\small\item\em valor da conversao \-A/\-D \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gad6dfa96884f0365810902d01791a1ef9}{
+uint32\-\_\-t \hyperlink{group__main__module_gad6dfa96884f0365810902d01791a1ef9}{tensao}}
+\label{group__main__module_gad6dfa96884f0365810902d01791a1ef9}
+
+\begin{DoxyCompactList}\small\item\em valor da tensao em m\-V a partir do valor convertido \-A/\-D \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga36142ddde297ed1d5577c81230997301}{
+uint16\-\_\-t \hyperlink{group__main__module_ga36142ddde297ed1d5577c81230997301}{temp}}
+\label{group__main__module_ga36142ddde297ed1d5577c81230997301}
+
+\begin{DoxyCompactList}\small\item\em valor da temperatura em decimos de graus \-Celsius a partir do valor da tensao \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga20710395ef2950d7e2113640d02bbb91}{
+uint16\-\_\-t \hyperlink{group__main__module_ga20710395ef2950d7e2113640d02bbb91}{tempaux}}
+\label{group__main__module_ga20710395ef2950d7e2113640d02bbb91}
+
+\begin{DoxyCompactList}\small\item\em variavel auxiliar da temperatura \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga0c889e2ae1000e5e5ca692dbd875d8bf}{
+uint16\-\_\-t \hyperlink{group__main__module_ga0c889e2ae1000e5e5ca692dbd875d8bf}{templimiar}}
+\label{group__main__module_ga0c889e2ae1000e5e5ca692dbd875d8bf}
+
+\begin{DoxyCompactList}\small\item\em valor da temperatura limiar \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gaa028460367ef5c570aafa2afa9a1f470}{
+uint16\-\_\-t \hyperlink{group__main__module_gaa028460367ef5c570aafa2afa9a1f470}{templimiartemp}}
+\label{group__main__module_gaa028460367ef5c570aafa2afa9a1f470}
+
+\begin{DoxyCompactList}\small\item\em \-Variavel temporaria para armazenar o valor da temperatura limiar. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga2e5a04327b5658199f0f7bda2acceee1}{
+uint8\-\_\-t \hyperlink{group__main__module_ga2e5a04327b5658199f0f7bda2acceee1}{c}}
+\label{group__main__module_ga2e5a04327b5658199f0f7bda2acceee1}
+
+\begin{DoxyCompactList}\small\item\em \-Caractere temporario durante a conversao de valor para string. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga37e90f5e3bd99fac2021fb3a326607d4}{
+uint8\-\_\-t \hyperlink{group__main__module_ga37e90f5e3bd99fac2021fb3a326607d4}{mode} = 0}
+\label{group__main__module_ga37e90f5e3bd99fac2021fb3a326607d4}
+
+\begin{DoxyCompactList}\small\item\em \-Modo de operacao do ventilador\-: 0 -\/ \-Desligado; 1 -\/ \-Ligado; 2 -\/ \-Auto. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gae4e2435f6842b9dc5bf5c5a09a6374ca}{
+uint8\-\_\-t \hyperlink{group__main__module_gae4e2435f6842b9dc5bf5c5a09a6374ca}{power} = 0}
+\label{group__main__module_gae4e2435f6842b9dc5bf5c5a09a6374ca}
+
+\begin{DoxyCompactList}\small\item\em \-Potencia de operacao do motor do ventilador -\/ valor entre 0 e 100. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga1219e07e4cb5715c5cc58d027b98f8cf}{
+uint8\-\_\-t \hyperlink{group__main__module_ga1219e07e4cb5715c5cc58d027b98f8cf}{powertemp} = 0}
+\label{group__main__module_ga1219e07e4cb5715c5cc58d027b98f8cf}
+
+\begin{DoxyCompactList}\small\item\em \-Variavel temporaria para armazenar o valor da potencia do motor. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_gaf27e3188294c2df66d975b74a09c001d}{
+uint8\-\_\-t \hyperlink{group__main__module_gaf27e3188294c2df66d975b74a09c001d}{i}}
+\label{group__main__module_gaf27e3188294c2df66d975b74a09c001d}
+
+\begin{DoxyCompactList}\small\item\em \-Variavel para contagem nos loops. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga17c4d1e6df73a6fab2fade6de04d1517}{
+uint8\-\_\-t \hyperlink{group__main__module_ga17c4d1e6df73a6fab2fade6de04d1517}{flagmode} = 0}
+\label{group__main__module_ga17c4d1e6df73a6fab2fade6de04d1517}
+
+\begin{DoxyCompactList}\small\item\em \-Flag para indicar que houve mudanca no modo de operacao do motor. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga92abda0bec7c1c978fe96f87aad18067}{
+uint8\-\_\-t \hyperlink{group__main__module_ga92abda0bec7c1c978fe96f87aad18067}{dir} = 0}
+\label{group__main__module_ga92abda0bec7c1c978fe96f87aad18067}
+
+\begin{DoxyCompactList}\small\item\em \-Indica o sentido de rotacao do motor\-: 0 -\/ \-Ventilador ; 1 -\/ \-Exaustor. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga4076d6945d9b8b6576d0c84040ec2400}{
+uint8\-\_\-t \hyperlink{group__main__module_ga4076d6945d9b8b6576d0c84040ec2400}{flagdir} = 0}
+\label{group__main__module_ga4076d6945d9b8b6576d0c84040ec2400}
+
+\begin{DoxyCompactList}\small\item\em \-Flag para indicar que houve mudanca no sentido de rotacao do motor. \end{DoxyCompactList}\item 
+\hypertarget{group__main__module_ga2002b1d0764f2bdd21866d9e186d5590}{
+uint8\-\_\-t \hyperlink{group__main__module_ga2002b1d0764f2bdd21866d9e186d5590}{count\-\_\-sub} = 4}
+\label{group__main__module_ga2002b1d0764f2bdd21866d9e186d5590}
+
+\begin{DoxyCompactList}\small\item\em \-Variavel para indicar se houve inscricao nos 4 topicos do \-M\-Q\-T\-T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Main do \-Projeto. \begin{DoxyVersion}{\-Version}
+01.\-01 
+\end{DoxyVersion}

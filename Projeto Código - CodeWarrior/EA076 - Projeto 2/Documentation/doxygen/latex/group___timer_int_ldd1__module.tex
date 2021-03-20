@@ -1,0 +1,93 @@
+\hypertarget{group___timer_int_ldd1__module}{
+\section{\-Timer\-Int\-Ldd1 module documentation}
+\label{group___timer_int_ldd1__module}\index{\-Timer\-Int\-Ldd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}}
+}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_timer_int_ldd1___t_device_data}{\-Timer\-Int\-Ldd1\-\_\-\-T\-Device\-Data}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___timer_int_ldd1__module_ga5f04a8830cd52a3ffa1678d113f31aee}{
+\#define {\bfseries \-A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-M\-A\-S\-K}~(\hyperlink{group___p_e___types__module_gafbe7f4d4e51560399c3bdd0218584533}{\-L\-D\-D\-\_\-\-T\-Event\-Mask})(\-L\-D\-D\-\_\-\-T\-I\-M\-E\-R\-I\-N\-T\-\_\-\-O\-N\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T)}
+\label{group___timer_int_ldd1__module_ga5f04a8830cd52a3ffa1678d113f31aee}
+
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_gafb6b69926d7c31c7571ad3d945251067}{\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x40040000\-U
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_ga5029b1a3ee62b1e77252cb5ee432e572}{\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data}~((\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$)\-P\-E\-\_\-\-L\-D\-D\-\_\-\-Get\-Device\-Structure(\-P\-E\-\_\-\-L\-D\-D\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-Timer\-Int\-Ldd1\-\_\-\-I\-D))
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_ga99f1a84b931818260bb4dfad5d071136}{\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_ga97ee83f24ca8c5f570d5be8bdc0c6dde}{\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___timer_int_ldd1__module_ga24d5bad052ceefb0ed97378c80c8dc03}{
+typedef \hyperlink{struct_timer_int_ldd1___t_device_data}{\-Timer\-Int\-Ldd1\-\_\-\-T\-Device\-Data} $\ast$ {\bfseries \-Timer\-Int\-Ldd1\-\_\-\-T\-Device\-Data\-Ptr}}
+\label{group___timer_int_ldd1__module_ga24d5bad052ceefb0ed97378c80c8dc03}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___timer_int_ldd1__module_ga069f7459fc74e21fb9bcceadbe7cb9cb}{\-Timer\-Int\-Ldd1\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hypertarget{group___timer_int_ldd1__module_gacae460b9fcb6bca96281a7a9a325130b}{
+void {\bfseries \-T\-U2\-\_\-\-On\-Counter\-Restart} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___timer_int_ldd1__module_gacae460b9fcb6bca96281a7a9a325130b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{group___timer_int_ldd1__module_ga5029b1a3ee62b1e77252cb5ee432e572}{
+\index{\-Timer\-Int\-Ldd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}!\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data@{\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data}}
+\index{\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data@{\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data}!TimerIntLdd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}}
+\subsubsection[{\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Timer\-Int\-Ldd1\-\_\-\-Device\-Data~(({\bf \-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$)\-P\-E\-\_\-\-L\-D\-D\-\_\-\-Get\-Device\-Structure(\-P\-E\-\_\-\-L\-D\-D\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-Timer\-Int\-Ldd1\-\_\-\-I\-D))}}
+\label{group___timer_int_ldd1__module_ga5029b1a3ee62b1e77252cb5ee432e572}
+\-Device data structure pointer used when auto initialization property is enabled. \-This constant can be passed as a first parameter to all component's methods. \hypertarget{group___timer_int_ldd1__module_ga99f1a84b931818260bb4dfad5d071136}{
+\index{\-Timer\-Int\-Ldd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}!\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}!TimerIntLdd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}}
+\subsubsection[{\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\label{group___timer_int_ldd1__module_ga99f1a84b931818260bb4dfad5d071136}
+\-Init method of the component \-Timer\-Int\-Ldd1 is enabled (generated) \hypertarget{group___timer_int_ldd1__module_ga97ee83f24ca8c5f570d5be8bdc0c6dde}{
+\index{\-Timer\-Int\-Ldd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}!\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}!TimerIntLdd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}}
+\subsubsection[{\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\label{group___timer_int_ldd1__module_ga97ee83f24ca8c5f570d5be8bdc0c6dde}
+\-On\-Interrupt event of the component \-Timer\-Int\-Ldd1 is enabled (generated) \hypertarget{group___timer_int_ldd1__module_gafb6b69926d7c31c7571ad3d945251067}{
+\index{\-Timer\-Int\-Ldd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}!\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S@{\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S@{\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}!TimerIntLdd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}}
+\subsubsection[{\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S~0x40040000\-U}}
+\label{group___timer_int_ldd1__module_gafb6b69926d7c31c7571ad3d945251067}
+\-Peripheral base address of a device allocated by the component. \-This constant can be used directly in \-P\-D\-D macros. 
+
+\subsection{\-Function \-Documentation}
+\hypertarget{group___timer_int_ldd1__module_ga069f7459fc74e21fb9bcceadbe7cb9cb}{
+\index{\-Timer\-Int\-Ldd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}!\-Timer\-Int\-Ldd1\-\_\-\-Init@{\-Timer\-Int\-Ldd1\-\_\-\-Init}}
+\index{\-Timer\-Int\-Ldd1\-\_\-\-Init@{\-Timer\-Int\-Ldd1\-\_\-\-Init}!TimerIntLdd1 module documentation@{\-Timer\-Int\-Ldd1 module documentation}}
+\subsubsection[{\-Timer\-Int\-Ldd1\-\_\-\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \-Timer\-Int\-Ldd1\-\_\-\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$}]{\-User\-Data\-Ptr}
+\end{DoxyParamCaption}
+)}}
+\label{group___timer_int_ldd1__module_ga069f7459fc74e21fb9bcceadbe7cb9cb}
+
+
+\-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-User\-Data\-Ptr} & -\/ \-Pointer to the user or \-R\-T\-O\-S specific data. \-This pointer will be passed as an event or callback parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\begin{DoxyItemize}
+\item \-Pointer to the dynamically allocated private structure or \-N\-U\-L\-L if there was an error. 
+\end{DoxyItemize}
+\end{DoxyReturn}

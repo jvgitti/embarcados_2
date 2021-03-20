@@ -1,0 +1,54 @@
+\hypertarget{_pwm_ldd1_8h}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-Pwm\-Ldd1.h \-File \-Reference}
+\label{_pwm_ldd1_8h}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-Pwm\-Ldd1.\-h@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-Pwm\-Ldd1.\-h}}
+}
+
+
+\-This component implements a pulse-\/width modulation generator that generates signal with variable duty and fixed cycle. \-This \-P\-W\-M component provides a high level \-A\-P\-I for unified hardware access to various timer devices using the \-Timer\-Unit component.  
+
+
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Types.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Error.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Const.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-I\-O\-\_\-\-Map.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-U1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-P\-M\-\_\-\-P\-D\-D.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Cpu.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___pwm_ldd1__module_ga84cbb2ece08b2bbcf18cd8d11cd04be6}{
+\#define {\bfseries \-Pwm\-Ldd1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-V\-A\-L\-U\-E}~0x\-C\-C\-C\-D\-U\-L}
+\label{group___pwm_ldd1__module_ga84cbb2ece08b2bbcf18cd8d11cd04be6}
+
+\item 
+\hypertarget{group___pwm_ldd1__module_gacdcbd23818cd671814d7de57743ed9dc}{
+\#define {\bfseries \-Pwm\-Ldd1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-V\-A\-L\-U\-E\-\_\-0}~0x\-C\-C\-C\-D\-U\-L}
+\label{group___pwm_ldd1__module_gacdcbd23818cd671814d7de57743ed9dc}
+
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_gaa604ec73f2dc5e1e562b5db4340b6812}{\-Pwm\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x40039000\-U
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_ga1b3859d3bd55122c9154a66be455b8d9}{\-Pwm\-Ldd1\-\_\-\-Device\-Data}~((\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$)\-P\-E\-\_\-\-L\-D\-D\-\_\-\-Get\-Device\-Structure(\-P\-E\-\_\-\-L\-D\-D\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-Pwm\-Ldd1\-\_\-\-I\-D))
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_gaa38fc755e64052f475cb0e4d21450e14}{\-Pwm\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_gafcbaff4220af3843645ee8afd0dc33af}{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___pwm_ldd1__module_ga3c40592e036370a925ce77985b442fab}{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___pwm_ldd1__module_ga275bfbba3cebf17ba3f7ca816cb83da4}{\-Pwm\-Ldd1\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___pwm_ldd1__module_gaed049cbc4193f6508bf3445c18b21707}{\-Pwm\-Ldd1\-\_\-\-Set\-Ratio16} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint16\-\_\-t \-Ratio)
+\begin{DoxyCompactList}\small\item\em \-This method sets a new duty-\/cycle ratio. \-Ratio is expressed as a 16-\/bit unsigned integer number. 0 -\/ \-F\-F\-F\-F value is proportional to ratio 0 -\/ 100\%. \-The method is available only if it is not selected list of predefined values in \mbox{[}\-Starting pulse width\mbox{]} property. \-Note\-: \-Calculated duty depends on the timer possibilities and on the selected period. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___pwm_ldd1__module_ga294fccb3c55cae73731b301e253218d1}{\-Pwm\-Ldd1\-\_\-\-Set\-Duty\-U\-S} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint16\-\_\-t \-Time)
+\begin{DoxyCompactList}\small\item\em \-This method sets the new duty value of the output signal. \-The duty is expressed in microseconds as a 16-\/bit unsigned integer number. \-The method is available only if it is not selected list of predefined values in \mbox{[}\-Starting pulse width\mbox{]} property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This component implements a pulse-\/width modulation generator that generates signal with variable duty and fixed cycle. \-This \-P\-W\-M component provides a high level \-A\-P\-I for unified hardware access to various timer devices using the \-Timer\-Unit component. \begin{DoxyVersion}{\-Version}
+01.\-03 
+\end{DoxyVersion}

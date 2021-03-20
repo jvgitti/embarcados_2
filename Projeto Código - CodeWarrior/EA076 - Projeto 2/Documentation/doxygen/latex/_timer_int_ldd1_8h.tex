@@ -1,0 +1,42 @@
+\hypertarget{_timer_int_ldd1_8h}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-Timer\-Int\-Ldd1.h \-File \-Reference}
+\label{_timer_int_ldd1_8h}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-Timer\-Int\-Ldd1.\-h@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-Timer\-Int\-Ldd1.\-h}}
+}
+
+
+\-This \-Timer\-Int component implements a periodic interrupt. \-When the component and its events are enabled, the \char`\"{}\-On\-Interrupt\char`\"{} event is called periodically with the period that you specify. \-Timer\-Int supports also changing the period in runtime. \-This \-Timer\-Int component provides a high level \-A\-P\-I for unified hardware access to various timer devices using the \-Timer\-Unit component.  
+
+
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Types.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Error.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Const.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-I\-O\-\_\-\-Map.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-U2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Cpu.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_gafb6b69926d7c31c7571ad3d945251067}{\-Timer\-Int\-Ldd1\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x40040000\-U
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_ga5029b1a3ee62b1e77252cb5ee432e572}{\-Timer\-Int\-Ldd1\-\_\-\-Device\-Data}~((\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$)\-P\-E\-\_\-\-L\-D\-D\-\_\-\-Get\-Device\-Structure(\-P\-E\-\_\-\-L\-D\-D\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T\-\_\-\-Timer\-Int\-Ldd1\-\_\-\-I\-D))
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_ga99f1a84b931818260bb4dfad5d071136}{\-Timer\-Int\-Ldd1\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___timer_int_ldd1__module_ga97ee83f24ca8c5f570d5be8bdc0c6dde}{\-Timer\-Int\-Ldd1\-\_\-\-On\-Interrupt\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___timer_int_ldd1__module_ga069f7459fc74e21fb9bcceadbe7cb9cb}{\-Timer\-Int\-Ldd1\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hypertarget{group___timer_int_ldd1__module_gacae460b9fcb6bca96281a7a9a325130b}{
+void {\bfseries \-T\-U2\-\_\-\-On\-Counter\-Restart} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___timer_int_ldd1__module_gacae460b9fcb6bca96281a7a9a325130b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This \-Timer\-Int component implements a periodic interrupt. \-When the component and its events are enabled, the \char`\"{}\-On\-Interrupt\char`\"{} event is called periodically with the period that you specify. \-Timer\-Int supports also changing the period in runtime. \-This \-Timer\-Int component provides a high level \-A\-P\-I for unified hardware access to various timer devices using the \-Timer\-Unit component. \begin{DoxyVersion}{\-Version}
+01.\-02 
+\end{DoxyVersion}

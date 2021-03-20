@@ -1,0 +1,82 @@
+\hypertarget{_temp_8c}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-Temp.c \-File \-Reference}
+\label{_temp_8c}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-Temp.\-c@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-Temp.\-c}}
+}
+
+
+\-This device \char`\"{}\-A\-D\-C\char`\"{} implements an \-A/\-D converter, its control methods and interrupt/event handling procedure.  
+
+
+{\ttfamily \#include \char`\"{}\-Events.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Temp.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___temp__module_gae19b6bb2940d2fbe0a79852b070eeafd}{
+\#define {\bfseries \-S\-T\-O\-P}~0x00\-U}
+\label{group___temp__module_gae19b6bb2940d2fbe0a79852b070eeafd}
+
+\item 
+\hypertarget{group___temp__module_ga4691aeea76a4f3a3bdbff68ce5ab56a1}{
+\#define {\bfseries \-M\-E\-A\-S\-U\-R\-E}~0x01\-U}
+\label{group___temp__module_ga4691aeea76a4f3a3bdbff68ce5ab56a1}
+
+\item 
+\hypertarget{group___temp__module_gacf80826c205230fbc6a84ab9c46ff9af}{
+\#define {\bfseries \-C\-O\-N\-T\-I\-N\-U\-O\-U\-S}~0x02\-U}
+\label{group___temp__module_gacf80826c205230fbc6a84ab9c46ff9af}
+
+\item 
+\hypertarget{group___temp__module_gaae597f206a8cf88b5a0593f39044b937}{
+\#define {\bfseries \-S\-I\-N\-G\-L\-E}~0x03\-U}
+\label{group___temp__module_gaae597f206a8cf88b5a0593f39044b937}
+
+\item 
+\hypertarget{group___temp__module_ga26c3762ed87f9dd7c55b86b162e8461f}{
+\#define {\bfseries \-C\-A\-L\-I\-B\-R\-A\-T\-I\-N\-G}~0x04\-U}
+\label{group___temp__module_ga26c3762ed87f9dd7c55b86b162e8461f}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___temp__module_gadd7839c70d6d332deb9c468a79da1bd1}{
+void {\bfseries \-Temp\-\_\-\-H\-W\-En\-Di} (void)}
+\label{group___temp__module_gadd7839c70d6d332deb9c468a79da1bd1}
+
+\item 
+byte \hyperlink{group___temp__module_gaf8e64a18b1cefca985caf7be82554310}{\-Temp\-\_\-\-Measure} (bool \-Wait\-For\-Result)
+\begin{DoxyCompactList}\small\item\em \-This method performs one measurement on all channels that are set in the component inspector. (\-Note\-: \-If the \mbox{[}number of conversions\mbox{]} is more than one the conversion of \-A/\-D channels is performed specified number of times.) \end{DoxyCompactList}\item 
+byte \hyperlink{group___temp__module_ga06be17d5b444c7950a1f88dcbf55d352}{\-Temp\-\_\-\-Get\-Value16} (word $\ast$\-Values)
+\begin{DoxyCompactList}\small\item\em \-This method returns the last measured values of all channels. \-Compared with \mbox{[}\-Get\-Value\mbox{]} method this method returns more accurate result if the \mbox{[}number of conversions\mbox{]} is greater than 1 and \mbox{[}\-A\-D resolution\mbox{]} is less than 16 bits. \-In addition, the user code dependency on \mbox{[}\-A\-D resolution\mbox{]} is eliminated. \end{DoxyCompactList}\item 
+byte \hyperlink{group___temp__module_ga78a83e2ced691a9d8b8d963dce74f2d9}{\-Temp\-\_\-\-Calibrate} (bool \-Wait\-For\-Result)
+\begin{DoxyCompactList}\small\item\em \-This method returns the last measured values of all channels. \-Compared with \mbox{[}\-Get\-Value\mbox{]} method this method returns more accurate result if the \mbox{[}number of conversions\mbox{]} is greater than 1 and \mbox{[}\-A\-D resolution\mbox{]} is less than 16 bits. \-In addition, the user code dependency on \mbox{[}\-A\-D resolution\mbox{]} is eliminated. \end{DoxyCompactList}\item 
+\hypertarget{group___temp__module_ga4776d32af94d7918f74bc7377ae5351f}{
+void {\bfseries \-Adc\-Ldd1\-\_\-\-On\-Measurement\-Complete} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___temp__module_ga4776d32af94d7918f74bc7377ae5351f}
+
+\item 
+\hypertarget{group___temp__module_ga9f0e996f4dde00a546de5166276e3be4}{
+void {\bfseries \-Temp\-\_\-\-Init} (void)}
+\label{group___temp__module_ga9f0e996f4dde00a546de5166276e3be4}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___temp__module_ga6a1ba182ca9bc85d625f7019e5dc2c65}{
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ {\bfseries \-Adc\-Ldd1\-\_\-\-Device\-Data\-Ptr}}
+\label{group___temp__module_ga6a1ba182ca9bc85d625f7019e5dc2c65}
+
+\item 
+\hypertarget{group___temp__module_ga1e8b6b07fda567c90a896f44adf9cdaa}{
+volatile word {\bfseries \-Temp\-\_\-\-Out\-V}}
+\label{group___temp__module_ga1e8b6b07fda567c90a896f44adf9cdaa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This device \char`\"{}\-A\-D\-C\char`\"{} implements an \-A/\-D converter, its control methods and interrupt/event handling procedure. \begin{DoxyVersion}{\-Version}
+01.\-00 
+\end{DoxyVersion}

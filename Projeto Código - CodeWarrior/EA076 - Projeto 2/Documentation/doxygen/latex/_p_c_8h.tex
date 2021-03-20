@@ -1,0 +1,78 @@
+\hypertarget{_p_c_8h}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-P\-C.h \-File \-Reference}
+\label{_p_c_8h}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-P\-C.\-h@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-P\-C.\-h}}
+}
+
+
+\-This component \char`\"{}\-Asynchro\-Serial\char`\"{} implements an asynchronous serial communication. \-The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. \-Communication speed can be changed also in runtime. \-The component requires one on-\/chip asynchronous serial channel.  
+
+
+{\ttfamily \#include \char`\"{}\-A\-Serial\-Ldd2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Cpu.\-h\char`\"{}}\*
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_p_c___t_error}{\-P\-C\-\_\-\-T\-Error}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___p_c__module_gaf208785c5e4963a4e3710a41b37f8924}{
+typedef byte {\bfseries \-P\-C\-\_\-\-T\-Com\-Data}}
+\label{group___p_c__module_gaf208785c5e4963a4e3710a41b37f8924}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___p_c__module_ga546cd8422f12db7647f5f0d2693e42b4}{
+byte {\bfseries \-P\-C\-\_\-\-Recv\-Char} (\-P\-C\-\_\-\-T\-Com\-Data $\ast$\-Chr)}
+\label{group___p_c__module_ga546cd8422f12db7647f5f0d2693e42b4}
+
+\item 
+\hypertarget{group___p_c__module_gaa5b1e2fa0d0289376137ebc1d06421e0}{
+byte {\bfseries \-P\-C\-\_\-\-Send\-Char} (\-P\-C\-\_\-\-T\-Com\-Data \-Chr)}
+\label{group___p_c__module_gaa5b1e2fa0d0289376137ebc1d06421e0}
+
+\item 
+\hypertarget{group___p_c__module_ga8d3c73eba0f74441131507745d3cbbfb}{
+word {\bfseries \-P\-C\-\_\-\-Get\-Chars\-In\-Rx\-Buf} (void)}
+\label{group___p_c__module_ga8d3c73eba0f74441131507745d3cbbfb}
+
+\item 
+\hypertarget{group___p_c__module_ga05ea0d3e62257b21970f55f4be19b70e}{
+word {\bfseries \-P\-C\-\_\-\-Get\-Chars\-In\-Tx\-Buf} (void)}
+\label{group___p_c__module_ga05ea0d3e62257b21970f55f4be19b70e}
+
+\item 
+\hypertarget{group___p_c__module_gae38e6bd23fd0bcff007c523fadcc5c6b}{
+void {\bfseries \-P\-C\-\_\-\-Init} (void)}
+\label{group___p_c__module_gae38e6bd23fd0bcff007c523fadcc5c6b}
+
+\item 
+\hypertarget{group___p_c__module_ga7a02cc6280b30d13707952d78f8e6c73}{
+void {\bfseries \-A\-Serial\-Ldd2\-\_\-\-On\-Block\-Received} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___p_c__module_ga7a02cc6280b30d13707952d78f8e6c73}
+
+\item 
+\hypertarget{group___p_c__module_ga723758484ee852a66a707036a9a38a92}{
+void {\bfseries \-A\-Serial\-Ldd2\-\_\-\-On\-Block\-Sent} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___p_c__module_ga723758484ee852a66a707036a9a38a92}
+
+\item 
+\hypertarget{group___p_c__module_ga145a063bdf852caee1c1b8adeb02fc77}{
+void {\bfseries \-A\-Serial\-Ldd2\-\_\-\-On\-Error} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___p_c__module_ga145a063bdf852caee1c1b8adeb02fc77}
+
+\item 
+\hypertarget{group___p_c__module_ga702765a2c9f1c0e914a6ca8484088ec5}{
+void {\bfseries \-A\-Serial\-Ldd2\-\_\-\-On\-Break} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)}
+\label{group___p_c__module_ga702765a2c9f1c0e914a6ca8484088ec5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This component \char`\"{}\-Asynchro\-Serial\char`\"{} implements an asynchronous serial communication. \-The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. \-Communication speed can be changed also in runtime. \-The component requires one on-\/chip asynchronous serial channel. \begin{DoxyVersion}{\-Version}
+01.\-01 
+\end{DoxyVersion}

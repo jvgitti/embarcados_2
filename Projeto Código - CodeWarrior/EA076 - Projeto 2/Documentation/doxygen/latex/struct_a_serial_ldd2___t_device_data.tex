@@ -1,0 +1,85 @@
+\hypertarget{struct_a_serial_ldd2___t_device_data}{
+\section{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data \-Struct \-Reference}
+\label{struct_a_serial_ldd2___t_device_data}\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+}
+
+
+{\ttfamily \#include $<$\-A\-Serial\-Ldd2.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\-\_\-t \hyperlink{struct_a_serial_ldd2___t_device_data_a3a23d8d86c35f325643a62974866594f}{\-Ser\-Flag}
+\item 
+\hyperlink{group___p_e___types__module_ga3bd5d57e02458ce220540d0ad0462e06}{\-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-T\-Error} \hyperlink{struct_a_serial_ldd2___t_device_data_a1021f1662a4bc2bc7a9320dc212926e0}{\-Err\-Flag}
+\item 
+uint16\-\_\-t \hyperlink{struct_a_serial_ldd2___t_device_data_a551da007a82d4fd4e26ea72007112f46}{\-Inp\-Recv\-Data\-Num}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct_a_serial_ldd2___t_device_data_ae7d8edc8b9d60f3b627bc0549585de6c}{\-Inp\-Data\-Ptr}
+\item 
+uint16\-\_\-t \hyperlink{struct_a_serial_ldd2___t_device_data_ae6ceada79f32288b9d488088ea56bf36}{\-Inp\-Data\-Num\-Req}
+\item 
+uint16\-\_\-t \hyperlink{struct_a_serial_ldd2___t_device_data_a80df4c32d72ab149e6dbfb99b41c14f2}{\-Out\-Sent\-Data\-Num}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{struct_a_serial_ldd2___t_device_data_ab4427d30f2614d2947ac957aa5eb9165}{\-Out\-Data\-Ptr}
+\item 
+uint16\-\_\-t \hyperlink{struct_a_serial_ldd2___t_device_data_ac460a80b8506535c36fa730e3a61283d}{\-Out\-Data\-Num\-Req}
+\item 
+\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$ \hyperlink{struct_a_serial_ldd2___t_device_data_a5845eb75d51c879a652b884f6c71e8a3}{\-User\-Data\-Ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Device data structure type 
+
+\subsection{\-Field \-Documentation}
+\hypertarget{struct_a_serial_ldd2___t_device_data_a1021f1662a4bc2bc7a9320dc212926e0}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Err\-Flag@{\-Err\-Flag}}
+\index{\-Err\-Flag@{\-Err\-Flag}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Err\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-T\-Error} {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Err\-Flag}}}
+\label{struct_a_serial_ldd2___t_device_data_a1021f1662a4bc2bc7a9320dc212926e0}
+\-Error flags mirror of \-Ser\-Flag \hypertarget{struct_a_serial_ldd2___t_device_data_ae6ceada79f32288b9d488088ea56bf36}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Inp\-Data\-Num\-Req@{\-Inp\-Data\-Num\-Req}}
+\index{\-Inp\-Data\-Num\-Req@{\-Inp\-Data\-Num\-Req}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Inp\-Data\-Num\-Req}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Inp\-Data\-Num\-Req}}}
+\label{struct_a_serial_ldd2___t_device_data_ae6ceada79f32288b9d488088ea56bf36}
+\-The counter of characters to receive by \-Receive\-Block() \hypertarget{struct_a_serial_ldd2___t_device_data_ae7d8edc8b9d60f3b627bc0549585de6c}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Inp\-Data\-Ptr@{\-Inp\-Data\-Ptr}}
+\index{\-Inp\-Data\-Ptr@{\-Inp\-Data\-Ptr}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Inp\-Data\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Inp\-Data\-Ptr}}}
+\label{struct_a_serial_ldd2___t_device_data_ae7d8edc8b9d60f3b627bc0549585de6c}
+\-The buffer pointer for received characters \hypertarget{struct_a_serial_ldd2___t_device_data_a551da007a82d4fd4e26ea72007112f46}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Inp\-Recv\-Data\-Num@{\-Inp\-Recv\-Data\-Num}}
+\index{\-Inp\-Recv\-Data\-Num@{\-Inp\-Recv\-Data\-Num}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Inp\-Recv\-Data\-Num}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Inp\-Recv\-Data\-Num}}}
+\label{struct_a_serial_ldd2___t_device_data_a551da007a82d4fd4e26ea72007112f46}
+\-The counter of received characters \hypertarget{struct_a_serial_ldd2___t_device_data_ac460a80b8506535c36fa730e3a61283d}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Out\-Data\-Num\-Req@{\-Out\-Data\-Num\-Req}}
+\index{\-Out\-Data\-Num\-Req@{\-Out\-Data\-Num\-Req}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Out\-Data\-Num\-Req}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Out\-Data\-Num\-Req}}}
+\label{struct_a_serial_ldd2___t_device_data_ac460a80b8506535c36fa730e3a61283d}
+\-The counter of characters to be send by \-Send\-Block() \hypertarget{struct_a_serial_ldd2___t_device_data_ab4427d30f2614d2947ac957aa5eb9165}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Out\-Data\-Ptr@{\-Out\-Data\-Ptr}}
+\index{\-Out\-Data\-Ptr@{\-Out\-Data\-Ptr}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Out\-Data\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Out\-Data\-Ptr}}}
+\label{struct_a_serial_ldd2___t_device_data_ab4427d30f2614d2947ac957aa5eb9165}
+\-The buffer pointer for data to be transmitted \hypertarget{struct_a_serial_ldd2___t_device_data_a80df4c32d72ab149e6dbfb99b41c14f2}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Out\-Sent\-Data\-Num@{\-Out\-Sent\-Data\-Num}}
+\index{\-Out\-Sent\-Data\-Num@{\-Out\-Sent\-Data\-Num}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Out\-Sent\-Data\-Num}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Out\-Sent\-Data\-Num}}}
+\label{struct_a_serial_ldd2___t_device_data_a80df4c32d72ab149e6dbfb99b41c14f2}
+\-The counter of sent characters \hypertarget{struct_a_serial_ldd2___t_device_data_a3a23d8d86c35f325643a62974866594f}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-Ser\-Flag@{\-Ser\-Flag}}
+\index{\-Ser\-Flag@{\-Ser\-Flag}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-Ser\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-Ser\-Flag}}}
+\label{struct_a_serial_ldd2___t_device_data_a3a23d8d86c35f325643a62974866594f}
+\-Flags for serial communication \hypertarget{struct_a_serial_ldd2___t_device_data_a5845eb75d51c879a652b884f6c71e8a3}{
+\index{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}!\-User\-Data\-Ptr@{\-User\-Data\-Ptr}}
+\index{\-User\-Data\-Ptr@{\-User\-Data\-Ptr}!ASerialLdd2_TDeviceData@{\-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data}}
+\subsubsection[{\-User\-Data\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-D\-D\-\_\-\-T\-User\-Data}$\ast$ {\bf \-A\-Serial\-Ldd2\-\_\-\-T\-Device\-Data\-::\-User\-Data\-Ptr}}}
+\label{struct_a_serial_ldd2___t_device_data_a5845eb75d51c879a652b884f6c71e8a3}
+\-Pointer to user data 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\hyperlink{_a_serial_ldd2_8h}{\-A\-Serial\-Ldd2.\-h}\end{DoxyCompactItemize}

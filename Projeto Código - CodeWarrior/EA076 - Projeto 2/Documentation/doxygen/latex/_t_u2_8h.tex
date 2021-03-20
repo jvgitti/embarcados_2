@@ -1,0 +1,88 @@
+\hypertarget{_t_u2_8h}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-T\-U2.h \-File \-Reference}
+\label{_t_u2_8h}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-T\-U2.\-h@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-T\-U2.\-h}}
+}
+
+
+\-This \-Timer\-Unit component provides a low level \-A\-P\-I for unified hardware access across various timer devices using the \-Prescaler-\/\-Counter-\/\-Compare-\/\-Capture timer structure.  
+
+
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Types.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Error.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-E\-\_\-\-Const.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-I\-O\-\_\-\-Map.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-L\-P\-T\-M\-R\-\_\-\-P\-D\-D.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Cpu.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___t_u2__module_ga1c68a3027a6a083ee157df8abf31c5eb}{
+\#define {\bfseries \-\_\-\-\_\-\-B\-W\-User\-Type\-\_\-\-T\-U2\-\_\-\-T\-Value\-Type}}
+\label{group___t_u2__module_ga1c68a3027a6a083ee157df8abf31c5eb}
+
+\item 
+\hypertarget{group___t_u2__module_gacbb6225a8783590573e2ac7fd9975b56}{
+\#define {\bfseries \-T\-U2\-\_\-\-C\-N\-T\-\_\-\-I\-N\-P\-\_\-\-F\-R\-E\-Q\-\_\-\-U\-\_\-0}~0x8000\-U\-L}
+\label{group___t_u2__module_gacbb6225a8783590573e2ac7fd9975b56}
+
+\item 
+\hypertarget{group___t_u2__module_ga40327a9db7ecf813a922f66958cd75bc}{
+\#define {\bfseries \-T\-U2\-\_\-\-C\-N\-T\-\_\-\-I\-N\-P\-\_\-\-F\-R\-E\-Q\-\_\-\-R\-\_\-0}~32768.\-00013421773\-F}
+\label{group___t_u2__module_ga40327a9db7ecf813a922f66958cd75bc}
+
+\item 
+\hypertarget{group___t_u2__module_ga08c37626307a04d8dc6f988b4c24d16b}{
+\#define {\bfseries \-T\-U2\-\_\-\-C\-N\-T\-\_\-\-I\-N\-P\-\_\-\-F\-R\-E\-Q\-\_\-\-C\-O\-U\-N\-T}~0\-U}
+\label{group___t_u2__module_ga08c37626307a04d8dc6f988b4c24d16b}
+
+\item 
+\hypertarget{group___t_u2__module_ga17bc20b5987f952060f1ccc5958ffee8}{
+\#define {\bfseries \-T\-U2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-T\-I\-C\-K\-S}~0x00010000\-U\-L}
+\label{group___t_u2__module_ga17bc20b5987f952060f1ccc5958ffee8}
+
+\item 
+\hypertarget{group___t_u2__module_ga3e2b6dfb22ed2abbc45f10e6da89cd0e}{
+\#define {\bfseries \-T\-U2\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}~0x00\-U}
+\label{group___t_u2__module_ga3e2b6dfb22ed2abbc45f10e6da89cd0e}
+
+\item 
+\hypertarget{group___t_u2__module_gae412813f429f20e1c0ba0ec5f274938e}{
+\#define {\bfseries \-T\-U2\-\_\-\-C\-O\-U\-N\-T\-E\-R\-\_\-\-W\-I\-D\-T\-H}~0x10\-U}
+\label{group___t_u2__module_gae412813f429f20e1c0ba0ec5f274938e}
+
+\item 
+\hypertarget{group___t_u2__module_ga50d902b98beaf29dc91b833a0d8ffe55}{
+\#define {\bfseries \-T\-U2\-\_\-\-C\-O\-U\-N\-T\-E\-R\-\_\-\-D\-I\-R}~\-D\-I\-R\-\_\-\-U\-P}
+\label{group___t_u2__module_ga50d902b98beaf29dc91b833a0d8ffe55}
+
+\item 
+\#define \hyperlink{group___t_u2__module_ga69c849d0105007c508d3cf69625a8815}{\-T\-U2\-\_\-\-P\-R\-P\-H\-\_\-\-B\-A\-S\-E\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x40040000\-U
+\item 
+\#define \hyperlink{group___t_u2__module_gaeefa806c055bfc34a7da70c803df1ca6}{\-T\-U2\-\_\-\-Init\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group___t_u2__module_ga740b09f73dfea918f7e309158bff5c61}{\-T\-U2\-\_\-\-On\-Counter\-Restart\-\_\-\-E\-V\-E\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___t_u2__module_ga1e4e626433cdf196ef7f102cdb702b62}{
+typedef uint16\-\_\-t {\bfseries \-T\-U2\-\_\-\-T\-Value\-Type}}
+\label{group___t_u2__module_ga1e4e626433cdf196ef7f102cdb702b62}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___t_u2__module_gae55cf8d8f5bebdbc4dd97b33fe194474}{\-T\-U2\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hypertarget{group___t_u2__module_gad6c7538c485bc0e9c4edb3ea4f44565a}{
+{\bfseries \-P\-E\-\_\-\-I\-S\-R} (\-T\-U2\-\_\-\-Interrupt)}
+\label{group___t_u2__module_gad6c7538c485bc0e9c4edb3ea4f44565a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This \-Timer\-Unit component provides a low level \-A\-P\-I for unified hardware access across various timer devices using the \-Prescaler-\/\-Counter-\/\-Compare-\/\-Capture timer structure. \begin{DoxyVersion}{\-Version}
+01.\-11 
+\end{DoxyVersion}

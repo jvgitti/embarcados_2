@@ -1,0 +1,49 @@
+\hypertarget{_t_u2_8c}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-T\-U2.c \-File \-Reference}
+\label{_t_u2_8c}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-T\-U2.\-c@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-T\-U2.\-c}}
+}
+
+
+\-This \-Timer\-Unit component provides a low level \-A\-P\-I for unified hardware access across various timer devices using the \-Prescaler-\/\-Counter-\/\-Compare-\/\-Capture timer structure.  
+
+
+{\ttfamily \#include \char`\"{}\-Timer\-Int\-Ldd1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-T\-U2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-I\-O\-\_\-\-Map.\-h\char`\"{}}\*
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_t_u2___t_device_data}{\-T\-U2\-\_\-\-T\-Device\-Data}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___t_u2__module_ga5f04a8830cd52a3ffa1678d113f31aee}{
+\#define {\bfseries \-A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-M\-A\-S\-K}~(\hyperlink{group___p_e___types__module_gafbe7f4d4e51560399c3bdd0218584533}{\-L\-D\-D\-\_\-\-T\-Event\-Mask})(\-L\-D\-D\-\_\-\-T\-I\-M\-E\-R\-U\-N\-I\-T\-\_\-\-O\-N\-\_\-\-C\-O\-U\-N\-T\-E\-R\-\_\-\-R\-E\-S\-T\-A\-R\-T)}
+\label{group___t_u2__module_ga5f04a8830cd52a3ffa1678d113f31aee}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___t_u2__module_gabd5f771744cc22a55f1564e4e4902df1}{
+typedef \hyperlink{struct_t_u2___t_device_data}{\-T\-U2\-\_\-\-T\-Device\-Data} $\ast$ {\bfseries \-T\-U2\-\_\-\-T\-Device\-Data\-Ptr}}
+\label{group___t_u2__module_gabd5f771744cc22a55f1564e4e4902df1}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___t_u2__module_gae55cf8d8f5bebdbc4dd97b33fe194474}{\-T\-U2\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hypertarget{group___t_u2__module_gad6c7538c485bc0e9c4edb3ea4f44565a}{
+{\bfseries \-P\-E\-\_\-\-I\-S\-R} (\-T\-U2\-\_\-\-Interrupt)}
+\label{group___t_u2__module_gad6c7538c485bc0e9c4edb3ea4f44565a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This \-Timer\-Unit component provides a low level \-A\-P\-I for unified hardware access across various timer devices using the \-Prescaler-\/\-Counter-\/\-Compare-\/\-Capture timer structure. \begin{DoxyVersion}{\-Version}
+01.\-11 
+\end{DoxyVersion}

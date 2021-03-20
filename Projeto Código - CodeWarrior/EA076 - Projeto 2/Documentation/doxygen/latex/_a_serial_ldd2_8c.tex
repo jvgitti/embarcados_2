@@ -1,0 +1,41 @@
+\hypertarget{_a_serial_ldd2_8c}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-A\-Serial\-Ldd2.c \-File \-Reference}
+\label{_a_serial_ldd2_8c}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-A\-Serial\-Ldd2.\-c@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-A\-Serial\-Ldd2.\-c}}
+}
+
+
+\-This component \char`\"{}\-Serial\-\_\-\-L\-D\-D\char`\"{} implements an asynchronous serial communication. \-The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. \-Communication speed can be changed also in runtime. \-The component requires one on-\/chip asynchronous serial communication channel.  
+
+
+{\ttfamily \#include \char`\"{}\-A\-Serial\-Ldd2.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-P\-C.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-U\-A\-R\-T0\-\_\-\-P\-D\-D.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-S\-I\-M\-\_\-\-P\-D\-D.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_serial_ldd2__module_ga5f04a8830cd52a3ffa1678d113f31aee}{\-A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-M\-A\-S\-K}~(\-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-O\-N\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-C\-E\-I\-V\-E\-D $|$ \-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-O\-N\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-E\-N\-T $|$ \-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-O\-N\-\_\-\-B\-R\-E\-A\-K $|$ \-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R)
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___a_serial_ldd2__module_gaa0cd7e49c9c5deb19ce7f9ece16231c3}{\-A\-Serial\-Ldd2\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the \char`\"{}\-Enable
+         in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the \-Enable() method). \-In this case the \-Enable() method is not necessary and needn't to be generated. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___a_serial_ldd2__module_gaf41a4ccffe5f5791cbc9b6e6e912962d}{\-A\-Serial\-Ldd2\-\_\-\-Receive\-Block} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, \hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{\-L\-D\-D\-\_\-\-T\-Data} $\ast$\-Buffer\-Ptr, uint16\-\_\-t \-Size)
+\begin{DoxyCompactList}\small\item\em \-Specifies the number of data to receive. \-The method returns \-E\-R\-R\-\_\-\-B\-U\-S\-Y until the specified number of characters is received. \-Method \mbox{[}\-Cancel\-Block\-Reception\mbox{]} can be used to cancel a running receive operation. \-If a receive operation is not in progress (the method was not called or a previous operation has already finished) all received characters will be lost without any notification. \-To prevent the loss of data call the method immediately after the last receive operation has finished (e.\-g. from the \mbox{[}\-On\-Block\-Received\mbox{]} event). \-This method finishes immediately after calling it -\/ it doesn't wait the end of data reception. \-Use event \mbox{[}\-On\-Block\-Received\mbox{]} to check the end of data reception. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___a_serial_ldd2__module_gabd167598efd957d04eb9bdd2e51ae673}{\-A\-Serial\-Ldd2\-\_\-\-Send\-Block} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, \hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{\-L\-D\-D\-\_\-\-T\-Data} $\ast$\-Buffer\-Ptr, uint16\-\_\-t \-Size)
+\begin{DoxyCompactList}\small\item\em \-Sends a block of characters. \-The method returns \-E\-R\-R\-\_\-\-B\-U\-S\-Y when the previous block transmission is not completed. \-Method \mbox{[}\-Cancel\-Block\-Transmission\mbox{]} can be used to cancel a transmit operation. \-This method is available only if the transmitter property is enabled. \-This method finishes immediately after calling it -\/ it doesn't wait the end of data transmission. \-Use event \mbox{[}\-On\-Block\-Sent\mbox{]} to check the end of data transmission. \end{DoxyCompactList}\item 
+\hypertarget{group___a_serial_ldd2__module_ga8de88a30826abcdb10eeab68cc30bb09}{
+{\bfseries \-P\-E\-\_\-\-I\-S\-R} (\-A\-Serial\-Ldd2\-\_\-\-Interrupt)}
+\label{group___a_serial_ldd2__module_ga8de88a30826abcdb10eeab68cc30bb09}
+
+\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___a_serial_ldd2__module_gafab1fb38c1ca4d64933a973a271ad7b0}{\-A\-Serial\-Ldd2\-\_\-\-Get\-Error} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, \hyperlink{group___p_e___types__module_ga3bd5d57e02458ce220540d0ad0462e06}{\-L\-D\-D\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-T\-Error} $\ast$\-Error\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-This method returns a set of asserted flags. \-The flags are accumulated in the set. \-After calling this method the set is returned and cleared. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This component \char`\"{}\-Serial\-\_\-\-L\-D\-D\char`\"{} implements an asynchronous serial communication. \-The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. \-Communication speed can be changed also in runtime. \-The component requires one on-\/chip asynchronous serial communication channel. \begin{DoxyVersion}{\-Version}
+01.\-13 
+\end{DoxyVersion}

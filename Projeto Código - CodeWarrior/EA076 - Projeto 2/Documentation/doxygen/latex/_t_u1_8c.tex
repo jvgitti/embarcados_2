@@ -1,0 +1,58 @@
+\hypertarget{_t_u1_8c}{
+\section{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ \-Projeto 2/\-Generated\-\_\-\-Code/\-T\-U1.c \-File \-Reference}
+\label{_t_u1_8c}\index{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-T\-U1.\-c@{\-C\-:/\-Users/\-Guilherme/workspace/\-E\-A076 -\/ Projeto 2/\-Generated\-\_\-\-Code/\-T\-U1.\-c}}
+}
+
+
+\-This \-Timer\-Unit component provides a low level \-A\-P\-I for unified hardware access across various timer devices using the \-Prescaler-\/\-Counter-\/\-Compare-\/\-Capture timer structure.  
+
+
+{\ttfamily \#include \char`\"{}\-T\-U1.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-I\-O\-\_\-\-Map.\-h\char`\"{}}\*
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_t_u1___t_device_data}{\-T\-U1\-\_\-\-T\-Device\-Data}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___t_u1__module_gaae26cc68396d232c9dd6aed25157fe4c}{
+\#define {\bfseries \-A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-P\-I\-N\-\_\-\-M\-A\-S\-K}~(\hyperlink{group___p_e___types__module_ga210dbf1d49dc5f9d5198e06ad4d96fc3}{\-L\-D\-D\-\_\-\-T\-Pin\-Mask})(\-T\-U1\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-0\-\_\-\-P\-I\-N)}
+\label{group___t_u1__module_gaae26cc68396d232c9dd6aed25157fe4c}
+
+\item 
+\hypertarget{group___t_u1__module_ga23dbf3ce1b12c52cb0db3c47845a3fef}{
+\#define {\bfseries \-L\-A\-S\-T\-\_\-\-C\-H\-A\-N\-N\-E\-L}~0x00\-U}
+\label{group___t_u1__module_ga23dbf3ce1b12c52cb0db3c47845a3fef}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___t_u1__module_ga992897b60934aa5b8d6edb262c3bba55}{
+typedef \hyperlink{struct_t_u1___t_device_data}{\-T\-U1\-\_\-\-T\-Device\-Data} $\ast$ {\bfseries \-T\-U1\-\_\-\-T\-Device\-Data\-Ptr}}
+\label{group___t_u1__module_ga992897b60934aa5b8d6edb262c3bba55}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$ \hyperlink{group___t_u1__module_ga9bfbdf45fe9128c8d9e4245e3480d6da}{\-T\-U1\-\_\-\-Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{\-L\-D\-D\-\_\-\-T\-User\-Data} $\ast$\-User\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Initializes the device. \-Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. \-If the property \mbox{[}\char`\"{}\-Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}\-Enable\mbox{]} method). \-In this case the \mbox{[}\-Enable\mbox{]} method is not necessary and needn't to be generated. \-This method can be called only once. \-Before the second call of \-Init the \mbox{[}\-Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___t_u1__module_gaa378924b104d5f8423920b110e8941e9}{\-T\-U1\-\_\-\-Get\-Period\-Ticks} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, \-T\-U1\-\_\-\-T\-Value\-Type $\ast$\-Ticks\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Returns the number of counter ticks before re-\/initialization. \-See also method \mbox{[}\-Set\-Period\-Ticks\mbox{]}. \-This method is available only if the property \mbox{[}\char`\"{}\-Counter restart\char`\"{}\mbox{]} is switched to 'on-\/match' value. \end{DoxyCompactList}\item 
+\-T\-U1\-\_\-\-T\-Value\-Type \hyperlink{group___t_u1__module_ga1c2dce8338fb8784787fca8a8162ddbc}{\-T\-U1\-\_\-\-Get\-Counter\-Value} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Returns the content of counter register. \-This method can be used both if counter is enabled and if counter is disabled. \-The method is not available if \-H\-W doesn't allow reading of the counter. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___t_u1__module_gabc1056f77dad3dc9f11ccb4c2f3a9b47}{\-T\-U1\-\_\-\-Set\-Offset\-Ticks} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint8\-\_\-t \-Channel\-Idx, \-T\-U1\-\_\-\-T\-Value\-Type \-Ticks)
+\begin{DoxyCompactList}\small\item\em \-Sets the new offset value to channel specified by the parameter \-Channel\-Idx. \-It is user responsibility to use value below selected period. \-This method is available when at least one channel is configured. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___t_u1__module_ga92c04b5447fde657da71680968acd784}{\-T\-U1\-\_\-\-Get\-Offset\-Ticks} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint8\-\_\-t \-Channel\-Idx, \-T\-U1\-\_\-\-T\-Value\-Type $\ast$\-Ticks\-Ptr)
+\begin{DoxyCompactList}\small\item\em \-Returns the number of counter ticks to compare match channel specified by the parameter \-Channel\-Idx. \-See also method \mbox{[}\-Set\-Offset\-Ticks\mbox{]}. \-This method is available when at least one channel is configured. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{\-L\-D\-D\-\_\-\-T\-Error} \hyperlink{group___t_u1__module_ga69e314f91fe2ea96524ce0c389505b6b}{\-T\-U1\-\_\-\-Select\-Output\-Action} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{\-L\-D\-D\-\_\-\-T\-Device\-Data} $\ast$\-Device\-Data\-Ptr, uint8\-\_\-t \-Channel\-Idx, \hyperlink{group___p_e___types__module_ga2c05e6e8b549483727170a429c03425e}{\-L\-D\-D\-\_\-\-Timer\-Unit\-\_\-\-T\-Out\-Action} \-Compare\-Action, \hyperlink{group___p_e___types__module_ga2c05e6e8b549483727170a429c03425e}{\-L\-D\-D\-\_\-\-Timer\-Unit\-\_\-\-T\-Out\-Action} \-Counter\-Action)
+\begin{DoxyCompactList}\small\item\em \-Sets the type of compare match and counter overflow action on channel output. \-This method is available when at least one channel is configured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This \-Timer\-Unit component provides a low level \-A\-P\-I for unified hardware access across various timer devices using the \-Prescaler-\/\-Counter-\/\-Compare-\/\-Capture timer structure. \begin{DoxyVersion}{\-Version}
+01.\-11 
+\end{DoxyVersion}
